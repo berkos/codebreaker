@@ -1,0 +1,11 @@
+Feature: code-breaker starts game
+
+	As a code-breaker
+	I want to start a game
+	So that I can break the code
+
+	Scenario: start game
+		Given I am not yet playing
+		When i start a new game
+		Then i should see "Welcome to Codebreaker!"
+		And i should see "Enter guess:"
