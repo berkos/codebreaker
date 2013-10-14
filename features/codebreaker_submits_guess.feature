@@ -1,10 +1,18 @@
 Feature: code-breaker submits guess
 
-	As code-breaker
-	I want to submit a guess
-	So that I can try to breake the code
+	The code-breaker submits a guess of four numbers. The game marks the guess with + and - signs.
+	For each number in the guess that matches the number and position of a number in the secret code, the mark includes one + sign. For each number in the guess that matches the number but not the position of a number in the secret code, the mark includes one - sign.
 
-	Scenario: all exact matches
-		Given the secret code is "1234"
-		When i guess "1234"
-		Then the mark should be "++++"
+	Scenario Outline: submit guess
+		Given the secret code is "<code>"
+		When i guess "<guess>"
+		Then the mark should be "<mark>"
+
+		Scenarios: no matches
+			| code | guess | mark |
+			| 1234 | 5555  |			|
+
+		Scenarios: 1 number correct
+			| code | guess | mark |
+			| 1234 | 5555  | +		|
+			
