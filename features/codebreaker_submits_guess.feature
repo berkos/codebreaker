@@ -23,14 +23,14 @@ Feature: code-breaker submits guess
 			| 1234 |  5154 | +-		|
 			| 1234 |  2545 | --		|
 
-		Scenarios: 3 number correct
+		Scenarios: 3 numbers correct
 			| code | guess | mark |
 			| 1234 |  5234 | +++	|
 			| 1234 |  5134 | ++-	|
 			| 1234 |  5124 | +--	|
 			| 1234 |  5123 | ---	|
 
-		Scenarios: 3 number correct
+		Scenarios: all numbers correct
 			| code | guess | mark |
 			| 1234 |  1234 | ++++	|
 			| 1234 |  1243 | ++--	|
